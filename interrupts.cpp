@@ -19,8 +19,9 @@ int main(int argc, char** argv) {
     std::string execution;  //!< string to accumulate the execution output
 
     /******************ADD YOUR VARIABLES HERE*************************/
-
-
+    int currentTime;
+    int contextSaveTime = 10; //10ms context save time
+    int ISR_Runtime = 40;
 
     /******************************************************************/
 
@@ -29,8 +30,31 @@ int main(int argc, char** argv) {
         auto [activity, duration_intr] = parse_trace(trace);
 
         /******************ADD YOUR SIMULATION CODE HERE*************************/
+        if(activity== "SYSCALL")
+        {
+            auto [inter_out, new_time] = intr_boilerplate(currentTime,duration_intr,contextSaveTime,vectors);
+            execution.append(inter_out);
+            currentTime = new_time;
+            execution.append(inter_out);
 
+            execution.append(std::to_string(currentTime) + "," + std::to_string(ISR_Runtime ) + ",Executing ISR");
+            currentTime+= ISR_Runtime;
 
+            execution.append(std::to_string(currentTime) + "," + std::to_string(delays.at(duration_intr)) + "Calling Device Driver" );
+            currentTime += delays.at(duration_intr);
+
+            execution += std::to_string(currentTime) + ", 1, IRET\n";
+            currentTime += 1;
+        }
+        else if(activity == "END_IO"){
+            
+            //execution = execution + std::to_string(currentTime) + "what goes here?," + "End IO " + std::to_string(duration_intr) + ":Interrupt";
+           // execution += smth
+        }
+        else {
+            
+            //log the cpu one 
+        }
 
         /************************************************************************/
 

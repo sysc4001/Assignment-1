@@ -1,0 +1,33 @@
+CPU, 50
+SYSCALL, 7
+END_IO, 7
+CPU, 100
+SYSCALL, 12
+END_IO, 12
+CPU, 20
+
+
+590, 1, switch to kernel mode 
+591, 2, context saved
+593, 1, find vector 7 in memory position 14
+594, 1, obtain ISR address
+595, 24, call device driver // include all activities of the ISR (takes 110ms according
+to device table)
+...
+705, 1, IRET // IRET after 110ms
+712, 170, end of I/O 7: interrupt // this information is from the trace.txt file
+882, 1, switch to kernel mode
+883, 1, context saved
+884, 1, find vector 20 in memory position 40
+
+Switch to/from kernel mode (time: negligible; use a duration of 1 ms)
+- Save/restore context (say 10ms)
+- Depending on the interrupt number, calculate where in memory the ISR start address is
+(time: negligible; use a duration of 1 ms)
+- Get ISR address from vector table (time: negligible; use a duration of 1 ms)
+- Execute ISR body. Include all the activities carried by the ISR (each activity: say 40ms
+- Execute IRET (time: negligible; use a duration of 1 ms)
+The execution.txt file should include the following information, comma separated:
+
+
+
