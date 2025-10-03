@@ -2,7 +2,11 @@
  *
  * @file interrupts.cpp
  * @author Sasisekhar Govind
+ * @author Fareen. Lavji
  *
+ * Assignment assumptions:
+ * --> ISR of both END/IO and SYSCALL for the same device takes the same amount of time
+ * --> I/O devices are always available, i.e., no delay on I/O request, immediate start
  */
 
 #include<interrupts.hpp>
@@ -20,7 +24,13 @@ int main(int argc, char** argv) {
 
     /******************ADD YOUR VARIABLES HERE*************************/
 
-
+    /*
+    * @todo: milestone1.issue3 --> add variables
+    * activity, eventDuration, deviceNumber, taskEstimate, isrAddress,
+    * modeBit, deviceName, switchModeDuration = 1ms, saveContextDuration = 10ms,
+    * isrAddressSearchDuration = 1ms, isrAddressExtractDuration = 1ms,
+    * iretExecuteDuration, timeOfEvent, eventType, traceFileLineNumber
+    */
 
     /******************************************************************/
 

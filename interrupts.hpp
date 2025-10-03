@@ -139,4 +139,15 @@ void write_output(std::string execution) {
 
     std::cout << "Output generated in execution.txt" << std::endl;
 }
+
+// Function to iterate through the table line by line
+void iterateByLine() const {
+    for (const auto& row : table_) {
+        if (row.size() == 2) { // Ensure the row has exactly 2 columns
+            std::cout << "Column 1: " << row[0] << ", Column 2: " << row[1] << std::endl;
+        } else {
+            std::cerr << "Invalid row size. Skipping..." << std::endl;
+        }
+    }
+}
 #endif
