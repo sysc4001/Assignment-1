@@ -66,7 +66,24 @@ int main(int argc, char** argv) {
 
         }
         else if(activity == "END_IO"){
-            continue; //left incomplete for this commit 
+        
+		// checks if device number out of bounds
+		if (duration_intr < 0 || duration_intr >= (int)vectors.size()) {
+			execution += std::to_string(current_time) + ", 0, END_IO received for device " + std::to_string(duration_intr) + "\n";
+			continue;    
+		//to kernel mode, save context, find vector, load ISR into PC
+		auto [inter_out, new_time] = intr_boilerplate(current_time, duration_intr, context_save_time, vectors);
+		execution += inter_out;
+		current_time = new_time;
+		
+		//execution of ISR
+		execution += std::to_string(current_time) + ", " + std::to_string(ISR_runtime) + ", Executing ISR for END_IO device " + std::to_string(duration_intr) + "\n"
+		current_time += ISR_runtime;
+		
+		//IRET
+		execution += std::to_string(current_time) + ", " + std::to_string(negligible_time) + ", IRET\n";
+		current_time += negligible_time;
+ 
         }
         else {
             execution += std::to_string(current_time) + ", 0, UNKOWN ACTIVITY";
