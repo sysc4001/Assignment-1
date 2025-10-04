@@ -31,6 +31,13 @@ int main(int argc, char** argv) {
     * isrAddressSearchDuration = 1ms, isrAddressExtractDuration = 1ms,
     * iretExecuteDuration, timeOfEvent, eventType, traceFileLineNumber
     */
+    std::string activity;                 
+    int eventDuration = 0;               
+    int deviceNumber = 0;                 
+    int taskEstimate = 0;                
+    std::string isrAddress;              
+    int modeBit = 0;                      
+    std::string deviceName;  
 
     /******************************************************************/
 
