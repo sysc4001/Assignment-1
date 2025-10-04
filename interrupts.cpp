@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
     std::string execution;  //!< string to accumulate the execution output
 
     /******************ADD YOUR VARIABLES HERE*************************/
-
+    int testvar = 0; //test
 
 
     /******************************************************************/
