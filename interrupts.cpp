@@ -3,6 +3,7 @@
  * @file interrupts.cpp
  * @author Sasisekhar Govind
  * @author Fareen. Lavji
+ * @author Dearell Tobenna Ezeoke
  *
  * Assignment assumptions:
  * --> ISR of both END/IO and SYSCALL for the same device takes the same amount of time
