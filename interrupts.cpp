@@ -48,3 +48,16 @@ int main(int argc, char** argv) {
 void increment_uptime(int* comp_uptime_ms_ptr, int increment_val) {
     *comp_uptime_ms_ptr += increment_val;
 }
+
+void sim_task_over_time(std::string* execution_output, int* comp_uptime_ms_ptr, int task_time_ms, std::string task_name) {
+    // To simulate performing a task (ex: CPU Burst) over a period of time (ms), the program's
+    // output (execution_output) is given a new entry with the value in the comp_uptime_ms_ptr
+    // pointer (computer uptime), task_time_ms (how long the task takes), and task_name (the name
+    // of the task). After execution, the value in comp_uptime_ms_ptr is updated.
+    std::string const OUTPUT_DELIMITER = ", ";
+
+    std::string output_entry = std::to_string(*comp_uptime_ms_ptr) + OUTPUT_DELIMITER + std::to_string(task_time_ms) + OUTPUT_DELIMITER + task_name + "\n";
+    *execution_output += output_entry;
+
+    increment_uptime(comp_uptime_ms_ptr, task_time_ms);
+}

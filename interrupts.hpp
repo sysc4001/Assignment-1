@@ -143,3 +143,5 @@ void write_output(std::string execution) {
 
 // Function declarations
 void increment_uptime(int* comp_uptime_ms_ptr, int increment_val);
+
+void sim_task_over_time(std::string* execution_output, int* comp_uptime_ms_ptr, int task_time_ms, std::string task_name);
