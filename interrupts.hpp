@@ -140,3 +140,6 @@ void write_output(std::string execution) {
     std::cout << "Output generated in execution.txt" << std::endl;
 }
 #endif
+
+// Function declarations
+void increment_uptime(int* comp_uptime_ms_ptr, int increment_val);

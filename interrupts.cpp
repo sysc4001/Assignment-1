@@ -21,7 +21,8 @@ int main(int argc, char** argv) {
 
     /******************ADD YOUR VARIABLES HERE*************************/
 
-
+    int* comp_uptime_ms_ptr;
+    *comp_uptime_ms_ptr = 0; // Clock starts counting from 0 on startup
 
     /******************************************************************/
 
@@ -42,4 +43,8 @@ int main(int argc, char** argv) {
     write_output(execution);
 
     return 0;
+}
+
+void increment_uptime(int* comp_uptime_ms_ptr, int increment_val) {
+    *comp_uptime_ms_ptr += increment_val;
 }
