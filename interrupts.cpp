@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
     */
     std::string activity;
     int eventDuration = 0;
-    int deviceNumber = -1;
+    int deviceNumber = 0;
     int taskEstimate = 0;
     std::string isrAddress;
     int modeBit = 0;     
