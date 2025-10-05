@@ -1,6 +1,7 @@
 /**
  *
  * @file interrupts.cpp
+ * @author Jacob Gaumond
  * @author Sasisekhar Govind
  *
  */
