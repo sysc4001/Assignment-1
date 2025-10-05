@@ -32,13 +32,25 @@ int main(int argc, char** argv) {
     * isrAddressSearchDuration = 1ms, isrAddressExtractDuration = 1ms,
     * iretExecuteDuration, timeOfEvent, eventType, traceFileLineNumber
     */
-    std::string activity;                 
-    int eventDuration = 0;               
-    int deviceNumber = 0;                 
-    int taskEstimate = 0;                
-    std::string isrAddress;              
-    int modeBit = 0;                      
-    std::string deviceName;  
+    std::string activity;
+    int eventDuration = 0;
+    int deviceNumber = -1;
+    int taskEstimate = 0;
+    std::string isrAddress;
+    int modeBit = 0;     
+    std::string deviceName;
+
+    // Fixed timing parameters 
+    const int switchModeDuration = 1;
+    const int saveContextDuration = 10; 
+    const int isrAddressSearchDuration  = 1;
+    const int isrAddressExtractDuration = 1;
+    const int iretExecuteDuration       = 1;
+
+    // Simulation clocking and event metadata
+    long long timeOfEvent = 0;
+    std::string eventType;
+    int traceFileLineNumber = 0; 
 
     /******************************************************************/
 
