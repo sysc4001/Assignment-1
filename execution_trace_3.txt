@@ -1,0 +1,1017 @@
+0, 49, CPU burst
+49, 1, switch to kernel mode
+50, 10, context saved
+60, 1, find vector 6 in memory position 0x000C
+61, 1, load address 0X0639 into the PC
+62, 40, ISR for device 6
+102, 40, ISR for device 6
+142, 40, ISR for device 6
+182, 40, ISR for device 6
+222, 40, ISR for device 6
+262, 40, ISR for device 6
+302, 25, ISR for device 6
+327, 1, IRET
+328, 99, CPU burst
+427, 1, switch to kernel mode
+428, 10, context saved
+438, 1, find vector 6 in memory position 0x000C
+439, 1, load address 0X0639 into the PC
+440, 40, ISR for device 6
+480, 40, ISR for device 6
+520, 40, ISR for device 6
+560, 40, ISR for device 6
+600, 40, ISR for device 6
+640, 40, ISR for device 6
+680, 25, ISR for device 6
+705, 1, IRET
+706, 72, CPU burst
+778, 1, switch to kernel mode
+779, 10, context saved
+789, 1, find vector 13 in memory position 0x001A
+790, 1, load address 0X06C7 into the PC
+791, 40, ISR for device 13
+831, 40, ISR for device 13
+871, 40, ISR for device 13
+911, 40, ISR for device 13
+951, 40, ISR for device 13
+991, 40, ISR for device 13
+1031, 40, ISR for device 13
+1071, 40, ISR for device 13
+1111, 40, ISR for device 13
+1151, 40, ISR for device 13
+1191, 40, ISR for device 13
+1231, 40, ISR for device 13
+1271, 40, ISR for device 13
+1311, 40, ISR for device 13
+1351, 40, ISR for device 13
+1391, 36, ISR for device 13
+1427, 1, IRET
+1428, 29, CPU burst
+1457, 1, switch to kernel mode
+1458, 10, context saved
+1468, 1, find vector 13 in memory position 0x001A
+1469, 1, load address 0X06C7 into the PC
+1470, 40, ISR for device 13
+1510, 40, ISR for device 13
+1550, 40, ISR for device 13
+1590, 40, ISR for device 13
+1630, 40, ISR for device 13
+1670, 40, ISR for device 13
+1710, 40, ISR for device 13
+1750, 40, ISR for device 13
+1790, 40, ISR for device 13
+1830, 40, ISR for device 13
+1870, 40, ISR for device 13
+1910, 40, ISR for device 13
+1950, 40, ISR for device 13
+1990, 40, ISR for device 13
+2030, 40, ISR for device 13
+2070, 36, ISR for device 13
+2106, 1, IRET
+2107, 19, CPU burst
+2126, 1, switch to kernel mode
+2127, 10, context saved
+2137, 1, find vector 8 in memory position 0x0010
+2138, 1, load address 0X06EF into the PC
+2139, 40, ISR for device 8
+2179, 40, ISR for device 8
+2219, 40, ISR for device 8
+2259, 40, ISR for device 8
+2299, 40, ISR for device 8
+2339, 40, ISR for device 8
+2379, 40, ISR for device 8
+2419, 40, ISR for device 8
+2459, 40, ISR for device 8
+2499, 40, ISR for device 8
+2539, 40, ISR for device 8
+2579, 40, ISR for device 8
+2619, 40, ISR for device 8
+2659, 40, ISR for device 8
+2699, 40, ISR for device 8
+2739, 40, ISR for device 8
+2779, 40, ISR for device 8
+2819, 40, ISR for device 8
+2859, 40, ISR for device 8
+2899, 40, ISR for device 8
+2939, 40, ISR for device 8
+2979, 40, ISR for device 8
+3019, 40, ISR for device 8
+3059, 40, ISR for device 8
+3099, 40, ISR for device 8
+3139, 1, IRET
+3140, 66, CPU burst
+3206, 1, switch to kernel mode
+3207, 10, context saved
+3217, 1, find vector 8 in memory position 0x0010
+3218, 1, load address 0X06EF into the PC
+3219, 40, ISR for device 8
+3259, 40, ISR for device 8
+3299, 40, ISR for device 8
+3339, 40, ISR for device 8
+3379, 40, ISR for device 8
+3419, 40, ISR for device 8
+3459, 40, ISR for device 8
+3499, 40, ISR for device 8
+3539, 40, ISR for device 8
+3579, 40, ISR for device 8
+3619, 40, ISR for device 8
+3659, 40, ISR for device 8
+3699, 40, ISR for device 8
+3739, 40, ISR for device 8
+3779, 40, ISR for device 8
+3819, 40, ISR for device 8
+3859, 40, ISR for device 8
+3899, 40, ISR for device 8
+3939, 40, ISR for device 8
+3979, 40, ISR for device 8
+4019, 40, ISR for device 8
+4059, 40, ISR for device 8
+4099, 40, ISR for device 8
+4139, 40, ISR for device 8
+4179, 40, ISR for device 8
+4219, 1, IRET
+4220, 11, CPU burst
+4231, 1, switch to kernel mode
+4232, 10, context saved
+4242, 1, find vector 4 in memory position 0x0008
+4243, 1, load address 0X0292 into the PC
+4244, 40, ISR for device 4
+4284, 40, ISR for device 4
+4324, 40, ISR for device 4
+4364, 40, ISR for device 4
+4404, 40, ISR for device 4
+4444, 40, ISR for device 4
+4484, 10, ISR for device 4
+4494, 1, IRET
+4495, 21, CPU burst
+4516, 1, switch to kernel mode
+4517, 10, context saved
+4527, 1, find vector 4 in memory position 0x0008
+4528, 1, load address 0X0292 into the PC
+4529, 40, ISR for device 4
+4569, 40, ISR for device 4
+4609, 40, ISR for device 4
+4649, 40, ISR for device 4
+4689, 40, ISR for device 4
+4729, 40, ISR for device 4
+4769, 10, ISR for device 4
+4779, 1, IRET
+4780, 100, CPU burst
+4880, 1, switch to kernel mode
+4881, 10, context saved
+4891, 1, find vector 18 in memory position 0x0024
+4892, 1, load address 0X060A into the PC
+4893, 40, ISR for device 18
+4933, 40, ISR for device 18
+4973, 40, ISR for device 18
+5013, 3, ISR for device 18
+5016, 1, IRET
+5017, 41, CPU burst
+5058, 1, switch to kernel mode
+5059, 10, context saved
+5069, 1, find vector 18 in memory position 0x0024
+5070, 1, load address 0X060A into the PC
+5071, 40, ISR for device 18
+5111, 40, ISR for device 18
+5151, 40, ISR for device 18
+5191, 3, ISR for device 18
+5194, 1, IRET
+5195, 10, CPU burst
+5205, 1, switch to kernel mode
+5206, 10, context saved
+5216, 1, find vector 12 in memory position 0x0018
+5217, 1, load address 0X03B9 into the PC
+5218, 40, ISR for device 12
+5258, 40, ISR for device 12
+5298, 40, ISR for device 12
+5338, 25, ISR for device 12
+5363, 1, IRET
+5364, 76, CPU burst
+5440, 1, switch to kernel mode
+5441, 10, context saved
+5451, 1, find vector 12 in memory position 0x0018
+5452, 1, load address 0X03B9 into the PC
+5453, 40, ISR for device 12
+5493, 40, ISR for device 12
+5533, 40, ISR for device 12
+5573, 25, ISR for device 12
+5598, 1, IRET
+5599, 12, CPU burst
+5611, 1, switch to kernel mode
+5612, 10, context saved
+5622, 1, find vector 15 in memory position 0x001E
+5623, 1, load address 0X0584 into the PC
+5624, 40, ISR for device 15
+5664, 28, ISR for device 15
+5692, 1, IRET
+5693, 57, CPU burst
+5750, 1, switch to kernel mode
+5751, 10, context saved
+5761, 1, find vector 15 in memory position 0x001E
+5762, 1, load address 0X0584 into the PC
+5763, 40, ISR for device 15
+5803, 28, ISR for device 15
+5831, 1, IRET
+5832, 93, CPU burst
+5925, 1, switch to kernel mode
+5926, 10, context saved
+5936, 1, find vector 11 in memory position 0x0016
+5937, 1, load address 0X01F8 into the PC
+5938, 40, ISR for device 11
+5978, 40, ISR for device 11
+6018, 40, ISR for device 11
+6058, 40, ISR for device 11
+6098, 40, ISR for device 11
+6138, 40, ISR for device 11
+6178, 40, ISR for device 11
+6218, 40, ISR for device 11
+6258, 40, ISR for device 11
+6298, 40, ISR for device 11
+6338, 40, ISR for device 11
+6378, 40, ISR for device 11
+6418, 40, ISR for device 11
+6458, 3, ISR for device 11
+6461, 1, IRET
+6462, 56, CPU burst
+6518, 1, switch to kernel mode
+6519, 10, context saved
+6529, 1, find vector 11 in memory position 0x0016
+6530, 1, load address 0X01F8 into the PC
+6531, 40, ISR for device 11
+6571, 40, ISR for device 11
+6611, 40, ISR for device 11
+6651, 40, ISR for device 11
+6691, 40, ISR for device 11
+6731, 40, ISR for device 11
+6771, 40, ISR for device 11
+6811, 40, ISR for device 11
+6851, 40, ISR for device 11
+6891, 40, ISR for device 11
+6931, 40, ISR for device 11
+6971, 40, ISR for device 11
+7011, 40, ISR for device 11
+7051, 3, ISR for device 11
+7054, 1, IRET
+7055, 38, CPU burst
+7093, 1, switch to kernel mode
+7094, 10, context saved
+7104, 1, find vector 8 in memory position 0x0010
+7105, 1, load address 0X06EF into the PC
+7106, 40, ISR for device 8
+7146, 40, ISR for device 8
+7186, 40, ISR for device 8
+7226, 40, ISR for device 8
+7266, 40, ISR for device 8
+7306, 40, ISR for device 8
+7346, 40, ISR for device 8
+7386, 40, ISR for device 8
+7426, 40, ISR for device 8
+7466, 40, ISR for device 8
+7506, 40, ISR for device 8
+7546, 40, ISR for device 8
+7586, 40, ISR for device 8
+7626, 40, ISR for device 8
+7666, 40, ISR for device 8
+7706, 40, ISR for device 8
+7746, 40, ISR for device 8
+7786, 40, ISR for device 8
+7826, 40, ISR for device 8
+7866, 40, ISR for device 8
+7906, 40, ISR for device 8
+7946, 40, ISR for device 8
+7986, 40, ISR for device 8
+8026, 40, ISR for device 8
+8066, 40, ISR for device 8
+8106, 1, IRET
+8107, 12, CPU burst
+8119, 1, switch to kernel mode
+8120, 10, context saved
+8130, 1, find vector 8 in memory position 0x0010
+8131, 1, load address 0X06EF into the PC
+8132, 40, ISR for device 8
+8172, 40, ISR for device 8
+8212, 40, ISR for device 8
+8252, 40, ISR for device 8
+8292, 40, ISR for device 8
+8332, 40, ISR for device 8
+8372, 40, ISR for device 8
+8412, 40, ISR for device 8
+8452, 40, ISR for device 8
+8492, 40, ISR for device 8
+8532, 40, ISR for device 8
+8572, 40, ISR for device 8
+8612, 40, ISR for device 8
+8652, 40, ISR for device 8
+8692, 40, ISR for device 8
+8732, 40, ISR for device 8
+8772, 40, ISR for device 8
+8812, 40, ISR for device 8
+8852, 40, ISR for device 8
+8892, 40, ISR for device 8
+8932, 40, ISR for device 8
+8972, 40, ISR for device 8
+9012, 40, ISR for device 8
+9052, 40, ISR for device 8
+9092, 40, ISR for device 8
+9132, 1, IRET
+9133, 53, CPU burst
+9186, 1, switch to kernel mode
+9187, 10, context saved
+9197, 1, find vector 13 in memory position 0x001A
+9198, 1, load address 0X06C7 into the PC
+9199, 40, ISR for device 13
+9239, 40, ISR for device 13
+9279, 40, ISR for device 13
+9319, 40, ISR for device 13
+9359, 40, ISR for device 13
+9399, 40, ISR for device 13
+9439, 40, ISR for device 13
+9479, 40, ISR for device 13
+9519, 40, ISR for device 13
+9559, 40, ISR for device 13
+9599, 40, ISR for device 13
+9639, 40, ISR for device 13
+9679, 40, ISR for device 13
+9719, 40, ISR for device 13
+9759, 40, ISR for device 13
+9799, 36, ISR for device 13
+9835, 1, IRET
+9836, 10, CPU burst
+9846, 1, switch to kernel mode
+9847, 10, context saved
+9857, 1, find vector 13 in memory position 0x001A
+9858, 1, load address 0X06C7 into the PC
+9859, 40, ISR for device 13
+9899, 40, ISR for device 13
+9939, 40, ISR for device 13
+9979, 40, ISR for device 13
+10019, 40, ISR for device 13
+10059, 40, ISR for device 13
+10099, 40, ISR for device 13
+10139, 40, ISR for device 13
+10179, 40, ISR for device 13
+10219, 40, ISR for device 13
+10259, 40, ISR for device 13
+10299, 40, ISR for device 13
+10339, 40, ISR for device 13
+10379, 40, ISR for device 13
+10419, 40, ISR for device 13
+10459, 36, ISR for device 13
+10495, 1, IRET
+10496, 85, CPU burst
+10581, 1, switch to kernel mode
+10582, 10, context saved
+10592, 1, find vector 19 in memory position 0x0026
+10593, 1, load address 0X0765 into the PC
+10594, 40, ISR for device 19
+10634, 40, ISR for device 19
+10674, 40, ISR for device 19
+10714, 40, ISR for device 19
+10754, 40, ISR for device 19
+10794, 40, ISR for device 19
+10834, 40, ISR for device 19
+10874, 40, ISR for device 19
+10914, 40, ISR for device 19
+10954, 40, ISR for device 19
+10994, 40, ISR for device 19
+11034, 40, ISR for device 19
+11074, 40, ISR for device 19
+11114, 40, ISR for device 19
+11154, 40, ISR for device 19
+11194, 40, ISR for device 19
+11234, 12, ISR for device 19
+11246, 1, IRET
+11247, 81, CPU burst
+11328, 1, switch to kernel mode
+11329, 10, context saved
+11339, 1, find vector 19 in memory position 0x0026
+11340, 1, load address 0X0765 into the PC
+11341, 40, ISR for device 19
+11381, 40, ISR for device 19
+11421, 40, ISR for device 19
+11461, 40, ISR for device 19
+11501, 40, ISR for device 19
+11541, 40, ISR for device 19
+11581, 40, ISR for device 19
+11621, 40, ISR for device 19
+11661, 40, ISR for device 19
+11701, 40, ISR for device 19
+11741, 40, ISR for device 19
+11781, 40, ISR for device 19
+11821, 40, ISR for device 19
+11861, 40, ISR for device 19
+11901, 40, ISR for device 19
+11941, 40, ISR for device 19
+11981, 12, ISR for device 19
+11993, 1, IRET
+11994, 19, CPU burst
+12013, 1, switch to kernel mode
+12014, 10, context saved
+12024, 1, find vector 9 in memory position 0x0012
+12025, 1, load address 0X036C into the PC
+12026, 40, ISR for device 9
+12066, 40, ISR for device 9
+12106, 40, ISR for device 9
+12146, 36, ISR for device 9
+12182, 1, IRET
+12183, 30, CPU burst
+12213, 1, switch to kernel mode
+12214, 10, context saved
+12224, 1, find vector 9 in memory position 0x0012
+12225, 1, load address 0X036C into the PC
+12226, 40, ISR for device 9
+12266, 40, ISR for device 9
+12306, 40, ISR for device 9
+12346, 36, ISR for device 9
+12382, 1, IRET
+12383, 48, CPU burst
+12431, 1, switch to kernel mode
+12432, 10, context saved
+12442, 1, find vector 3 in memory position 0x0006
+12443, 1, load address 0X042B into the PC
+12444, 40, ISR for device 3
+12484, 40, ISR for device 3
+12524, 40, ISR for device 3
+12564, 40, ISR for device 3
+12604, 40, ISR for device 3
+12644, 40, ISR for device 3
+12684, 40, ISR for device 3
+12724, 20, ISR for device 3
+12744, 1, IRET
+12745, 35, CPU burst
+12780, 1, switch to kernel mode
+12781, 10, context saved
+12791, 1, find vector 3 in memory position 0x0006
+12792, 1, load address 0X042B into the PC
+12793, 40, ISR for device 3
+12833, 40, ISR for device 3
+12873, 40, ISR for device 3
+12913, 40, ISR for device 3
+12953, 40, ISR for device 3
+12993, 40, ISR for device 3
+13033, 40, ISR for device 3
+13073, 20, ISR for device 3
+13093, 1, IRET
+13094, 88, CPU burst
+13182, 1, switch to kernel mode
+13183, 10, context saved
+13193, 1, find vector 11 in memory position 0x0016
+13194, 1, load address 0X01F8 into the PC
+13195, 40, ISR for device 11
+13235, 40, ISR for device 11
+13275, 40, ISR for device 11
+13315, 40, ISR for device 11
+13355, 40, ISR for device 11
+13395, 40, ISR for device 11
+13435, 40, ISR for device 11
+13475, 40, ISR for device 11
+13515, 40, ISR for device 11
+13555, 40, ISR for device 11
+13595, 40, ISR for device 11
+13635, 40, ISR for device 11
+13675, 40, ISR for device 11
+13715, 3, ISR for device 11
+13718, 1, IRET
+13719, 20, CPU burst
+13739, 1, switch to kernel mode
+13740, 10, context saved
+13750, 1, find vector 11 in memory position 0x0016
+13751, 1, load address 0X01F8 into the PC
+13752, 40, ISR for device 11
+13792, 40, ISR for device 11
+13832, 40, ISR for device 11
+13872, 40, ISR for device 11
+13912, 40, ISR for device 11
+13952, 40, ISR for device 11
+13992, 40, ISR for device 11
+14032, 40, ISR for device 11
+14072, 40, ISR for device 11
+14112, 40, ISR for device 11
+14152, 40, ISR for device 11
+14192, 40, ISR for device 11
+14232, 40, ISR for device 11
+14272, 3, ISR for device 11
+14275, 1, IRET
+14276, 61, CPU burst
+14337, 1, switch to kernel mode
+14338, 10, context saved
+14348, 1, find vector 1 in memory position 0x0002
+14349, 1, load address 0X029C into the PC
+14350, 40, ISR for device 1
+14390, 40, ISR for device 1
+14430, 20, ISR for device 1
+14450, 1, IRET
+14451, 20, CPU burst
+14471, 1, switch to kernel mode
+14472, 10, context saved
+14482, 1, find vector 1 in memory position 0x0002
+14483, 1, load address 0X029C into the PC
+14484, 40, ISR for device 1
+14524, 40, ISR for device 1
+14564, 20, ISR for device 1
+14584, 1, IRET
+14585, 48, CPU burst
+14633, 1, switch to kernel mode
+14634, 10, context saved
+14644, 1, find vector 1 in memory position 0x0002
+14645, 1, load address 0X029C into the PC
+14646, 40, ISR for device 1
+14686, 40, ISR for device 1
+14726, 20, ISR for device 1
+14746, 1, IRET
+14747, 33, CPU burst
+14780, 1, switch to kernel mode
+14781, 10, context saved
+14791, 1, find vector 1 in memory position 0x0002
+14792, 1, load address 0X029C into the PC
+14793, 40, ISR for device 1
+14833, 40, ISR for device 1
+14873, 20, ISR for device 1
+14893, 1, IRET
+14894, 91, CPU burst
+14985, 1, switch to kernel mode
+14986, 10, context saved
+14996, 1, find vector 14 in memory position 0x001C
+14997, 1, load address 0X0165 into the PC
+14998, 40, ISR for device 14
+15038, 40, ISR for device 14
+15078, 40, ISR for device 14
+15118, 40, ISR for device 14
+15158, 40, ISR for device 14
+15198, 40, ISR for device 14
+15238, 40, ISR for device 14
+15278, 40, ISR for device 14
+15318, 40, ISR for device 14
+15358, 40, ISR for device 14
+15398, 40, ISR for device 14
+15438, 16, ISR for device 14
+15454, 1, IRET
+15455, 41, CPU burst
+15496, 1, switch to kernel mode
+15497, 10, context saved
+15507, 1, find vector 14 in memory position 0x001C
+15508, 1, load address 0X0165 into the PC
+15509, 40, ISR for device 14
+15549, 40, ISR for device 14
+15589, 40, ISR for device 14
+15629, 40, ISR for device 14
+15669, 40, ISR for device 14
+15709, 40, ISR for device 14
+15749, 40, ISR for device 14
+15789, 40, ISR for device 14
+15829, 40, ISR for device 14
+15869, 40, ISR for device 14
+15909, 40, ISR for device 14
+15949, 16, ISR for device 14
+15965, 1, IRET
+15966, 99, CPU burst
+16065, 1, switch to kernel mode
+16066, 10, context saved
+16076, 1, find vector 3 in memory position 0x0006
+16077, 1, load address 0X042B into the PC
+16078, 40, ISR for device 3
+16118, 40, ISR for device 3
+16158, 40, ISR for device 3
+16198, 40, ISR for device 3
+16238, 40, ISR for device 3
+16278, 40, ISR for device 3
+16318, 40, ISR for device 3
+16358, 20, ISR for device 3
+16378, 1, IRET
+16379, 50, CPU burst
+16429, 1, switch to kernel mode
+16430, 10, context saved
+16440, 1, find vector 3 in memory position 0x0006
+16441, 1, load address 0X042B into the PC
+16442, 40, ISR for device 3
+16482, 40, ISR for device 3
+16522, 40, ISR for device 3
+16562, 40, ISR for device 3
+16602, 40, ISR for device 3
+16642, 40, ISR for device 3
+16682, 40, ISR for device 3
+16722, 20, ISR for device 3
+16742, 1, IRET
+16743, 22, CPU burst
+16765, 1, switch to kernel mode
+16766, 10, context saved
+16776, 1, find vector 17 in memory position 0x0022
+16777, 1, load address 0X05B3 into the PC
+16778, 40, ISR for device 17
+16818, 40, ISR for device 17
+16858, 40, ISR for device 17
+16898, 40, ISR for device 17
+16938, 40, ISR for device 17
+16978, 35, ISR for device 17
+17013, 1, IRET
+17014, 66, CPU burst
+17080, 1, switch to kernel mode
+17081, 10, context saved
+17091, 1, find vector 17 in memory position 0x0022
+17092, 1, load address 0X05B3 into the PC
+17093, 40, ISR for device 17
+17133, 40, ISR for device 17
+17173, 40, ISR for device 17
+17213, 40, ISR for device 17
+17253, 40, ISR for device 17
+17293, 35, ISR for device 17
+17328, 1, IRET
+17329, 55, CPU burst
+17384, 1, switch to kernel mode
+17385, 10, context saved
+17395, 1, find vector 14 in memory position 0x001C
+17396, 1, load address 0X0165 into the PC
+17397, 40, ISR for device 14
+17437, 40, ISR for device 14
+17477, 40, ISR for device 14
+17517, 40, ISR for device 14
+17557, 40, ISR for device 14
+17597, 40, ISR for device 14
+17637, 40, ISR for device 14
+17677, 40, ISR for device 14
+17717, 40, ISR for device 14
+17757, 40, ISR for device 14
+17797, 40, ISR for device 14
+17837, 16, ISR for device 14
+17853, 1, IRET
+17854, 80, CPU burst
+17934, 1, switch to kernel mode
+17935, 10, context saved
+17945, 1, find vector 14 in memory position 0x001C
+17946, 1, load address 0X0165 into the PC
+17947, 40, ISR for device 14
+17987, 40, ISR for device 14
+18027, 40, ISR for device 14
+18067, 40, ISR for device 14
+18107, 40, ISR for device 14
+18147, 40, ISR for device 14
+18187, 40, ISR for device 14
+18227, 40, ISR for device 14
+18267, 40, ISR for device 14
+18307, 40, ISR for device 14
+18347, 40, ISR for device 14
+18387, 16, ISR for device 14
+18403, 1, IRET
+18404, 51, CPU burst
+18455, 1, switch to kernel mode
+18456, 10, context saved
+18466, 1, find vector 15 in memory position 0x001E
+18467, 1, load address 0X0584 into the PC
+18468, 40, ISR for device 15
+18508, 28, ISR for device 15
+18536, 1, IRET
+18537, 61, CPU burst
+18598, 1, switch to kernel mode
+18599, 10, context saved
+18609, 1, find vector 15 in memory position 0x001E
+18610, 1, load address 0X0584 into the PC
+18611, 40, ISR for device 15
+18651, 28, ISR for device 15
+18679, 1, IRET
+18680, 39, CPU burst
+18719, 1, switch to kernel mode
+18720, 10, context saved
+18730, 1, find vector 17 in memory position 0x0022
+18731, 1, load address 0X05B3 into the PC
+18732, 40, ISR for device 17
+18772, 40, ISR for device 17
+18812, 40, ISR for device 17
+18852, 40, ISR for device 17
+18892, 40, ISR for device 17
+18932, 35, ISR for device 17
+18967, 1, IRET
+18968, 80, CPU burst
+19048, 1, switch to kernel mode
+19049, 10, context saved
+19059, 1, find vector 17 in memory position 0x0022
+19060, 1, load address 0X05B3 into the PC
+19061, 40, ISR for device 17
+19101, 40, ISR for device 17
+19141, 40, ISR for device 17
+19181, 40, ISR for device 17
+19221, 40, ISR for device 17
+19261, 35, ISR for device 17
+19296, 1, IRET
+19297, 96, CPU burst
+19393, 1, switch to kernel mode
+19394, 10, context saved
+19404, 1, find vector 19 in memory position 0x0026
+19405, 1, load address 0X0765 into the PC
+19406, 40, ISR for device 19
+19446, 40, ISR for device 19
+19486, 40, ISR for device 19
+19526, 40, ISR for device 19
+19566, 40, ISR for device 19
+19606, 40, ISR for device 19
+19646, 40, ISR for device 19
+19686, 40, ISR for device 19
+19726, 40, ISR for device 19
+19766, 40, ISR for device 19
+19806, 40, ISR for device 19
+19846, 40, ISR for device 19
+19886, 40, ISR for device 19
+19926, 40, ISR for device 19
+19966, 40, ISR for device 19
+20006, 40, ISR for device 19
+20046, 12, ISR for device 19
+20058, 1, IRET
+20059, 88, CPU burst
+20147, 1, switch to kernel mode
+20148, 10, context saved
+20158, 1, find vector 19 in memory position 0x0026
+20159, 1, load address 0X0765 into the PC
+20160, 40, ISR for device 19
+20200, 40, ISR for device 19
+20240, 40, ISR for device 19
+20280, 40, ISR for device 19
+20320, 40, ISR for device 19
+20360, 40, ISR for device 19
+20400, 40, ISR for device 19
+20440, 40, ISR for device 19
+20480, 40, ISR for device 19
+20520, 40, ISR for device 19
+20560, 40, ISR for device 19
+20600, 40, ISR for device 19
+20640, 40, ISR for device 19
+20680, 40, ISR for device 19
+20720, 40, ISR for device 19
+20760, 40, ISR for device 19
+20800, 12, ISR for device 19
+20812, 1, IRET
+20813, 97, CPU burst
+20910, 1, switch to kernel mode
+20911, 10, context saved
+20921, 1, find vector 8 in memory position 0x0010
+20922, 1, load address 0X06EF into the PC
+20923, 40, ISR for device 8
+20963, 40, ISR for device 8
+21003, 40, ISR for device 8
+21043, 40, ISR for device 8
+21083, 40, ISR for device 8
+21123, 40, ISR for device 8
+21163, 40, ISR for device 8
+21203, 40, ISR for device 8
+21243, 40, ISR for device 8
+21283, 40, ISR for device 8
+21323, 40, ISR for device 8
+21363, 40, ISR for device 8
+21403, 40, ISR for device 8
+21443, 40, ISR for device 8
+21483, 40, ISR for device 8
+21523, 40, ISR for device 8
+21563, 40, ISR for device 8
+21603, 40, ISR for device 8
+21643, 40, ISR for device 8
+21683, 40, ISR for device 8
+21723, 40, ISR for device 8
+21763, 40, ISR for device 8
+21803, 40, ISR for device 8
+21843, 40, ISR for device 8
+21883, 40, ISR for device 8
+21923, 1, IRET
+21924, 39, CPU burst
+21963, 1, switch to kernel mode
+21964, 10, context saved
+21974, 1, find vector 8 in memory position 0x0010
+21975, 1, load address 0X06EF into the PC
+21976, 40, ISR for device 8
+22016, 40, ISR for device 8
+22056, 40, ISR for device 8
+22096, 40, ISR for device 8
+22136, 40, ISR for device 8
+22176, 40, ISR for device 8
+22216, 40, ISR for device 8
+22256, 40, ISR for device 8
+22296, 40, ISR for device 8
+22336, 40, ISR for device 8
+22376, 40, ISR for device 8
+22416, 40, ISR for device 8
+22456, 40, ISR for device 8
+22496, 40, ISR for device 8
+22536, 40, ISR for device 8
+22576, 40, ISR for device 8
+22616, 40, ISR for device 8
+22656, 40, ISR for device 8
+22696, 40, ISR for device 8
+22736, 40, ISR for device 8
+22776, 40, ISR for device 8
+22816, 40, ISR for device 8
+22856, 40, ISR for device 8
+22896, 40, ISR for device 8
+22936, 40, ISR for device 8
+22976, 1, IRET
+22977, 30, CPU burst
+23007, 1, switch to kernel mode
+23008, 10, context saved
+23018, 1, find vector 4 in memory position 0x0008
+23019, 1, load address 0X0292 into the PC
+23020, 40, ISR for device 4
+23060, 40, ISR for device 4
+23100, 40, ISR for device 4
+23140, 40, ISR for device 4
+23180, 40, ISR for device 4
+23220, 40, ISR for device 4
+23260, 10, ISR for device 4
+23270, 1, IRET
+23271, 77, CPU burst
+23348, 1, switch to kernel mode
+23349, 10, context saved
+23359, 1, find vector 4 in memory position 0x0008
+23360, 1, load address 0X0292 into the PC
+23361, 40, ISR for device 4
+23401, 40, ISR for device 4
+23441, 40, ISR for device 4
+23481, 40, ISR for device 4
+23521, 40, ISR for device 4
+23561, 40, ISR for device 4
+23601, 10, ISR for device 4
+23611, 1, IRET
+23612, 85, CPU burst
+23697, 1, switch to kernel mode
+23698, 10, context saved
+23708, 1, find vector 13 in memory position 0x001A
+23709, 1, load address 0X06C7 into the PC
+23710, 40, ISR for device 13
+23750, 40, ISR for device 13
+23790, 40, ISR for device 13
+23830, 40, ISR for device 13
+23870, 40, ISR for device 13
+23910, 40, ISR for device 13
+23950, 40, ISR for device 13
+23990, 40, ISR for device 13
+24030, 40, ISR for device 13
+24070, 40, ISR for device 13
+24110, 40, ISR for device 13
+24150, 40, ISR for device 13
+24190, 40, ISR for device 13
+24230, 40, ISR for device 13
+24270, 40, ISR for device 13
+24310, 36, ISR for device 13
+24346, 1, IRET
+24347, 47, CPU burst
+24394, 1, switch to kernel mode
+24395, 10, context saved
+24405, 1, find vector 13 in memory position 0x001A
+24406, 1, load address 0X06C7 into the PC
+24407, 40, ISR for device 13
+24447, 40, ISR for device 13
+24487, 40, ISR for device 13
+24527, 40, ISR for device 13
+24567, 40, ISR for device 13
+24607, 40, ISR for device 13
+24647, 40, ISR for device 13
+24687, 40, ISR for device 13
+24727, 40, ISR for device 13
+24767, 40, ISR for device 13
+24807, 40, ISR for device 13
+24847, 40, ISR for device 13
+24887, 40, ISR for device 13
+24927, 40, ISR for device 13
+24967, 40, ISR for device 13
+25007, 36, ISR for device 13
+25043, 1, IRET
+25044, 18, CPU burst
+25062, 44, CPU burst
+25106, 53, CPU burst
+25159, 1, switch to kernel mode
+25160, 10, context saved
+25170, 1, find vector 6 in memory position 0x000C
+25171, 1, load address 0X0639 into the PC
+25172, 40, ISR for device 6
+25212, 40, ISR for device 6
+25252, 40, ISR for device 6
+25292, 40, ISR for device 6
+25332, 40, ISR for device 6
+25372, 40, ISR for device 6
+25412, 25, ISR for device 6
+25437, 1, IRET
+25438, 69, CPU burst
+25507, 1, switch to kernel mode
+25508, 10, context saved
+25518, 1, find vector 6 in memory position 0x000C
+25519, 1, load address 0X0639 into the PC
+25520, 40, ISR for device 6
+25560, 40, ISR for device 6
+25600, 40, ISR for device 6
+25640, 40, ISR for device 6
+25680, 40, ISR for device 6
+25720, 40, ISR for device 6
+25760, 25, ISR for device 6
+25785, 1, IRET
+25786, 72, CPU burst
+25858, 1, switch to kernel mode
+25859, 10, context saved
+25869, 1, find vector 4 in memory position 0x0008
+25870, 1, load address 0X0292 into the PC
+25871, 40, ISR for device 4
+25911, 40, ISR for device 4
+25951, 40, ISR for device 4
+25991, 40, ISR for device 4
+26031, 40, ISR for device 4
+26071, 40, ISR for device 4
+26111, 10, ISR for device 4
+26121, 1, IRET
+26122, 25, CPU burst
+26147, 1, switch to kernel mode
+26148, 10, context saved
+26158, 1, find vector 4 in memory position 0x0008
+26159, 1, load address 0X0292 into the PC
+26160, 40, ISR for device 4
+26200, 40, ISR for device 4
+26240, 40, ISR for device 4
+26280, 40, ISR for device 4
+26320, 40, ISR for device 4
+26360, 40, ISR for device 4
+26400, 10, ISR for device 4
+26410, 1, IRET
+26411, 87, CPU burst
+26498, 1, switch to kernel mode
+26499, 10, context saved
+26509, 1, find vector 5 in memory position 0x000A
+26510, 1, load address 0X048B into the PC
+26511, 40, ISR for device 5
+26551, 40, ISR for device 5
+26591, 40, ISR for device 5
+26631, 40, ISR for device 5
+26671, 40, ISR for device 5
+26711, 11, ISR for device 5
+26722, 1, IRET
+26723, 63, CPU burst
+26786, 1, switch to kernel mode
+26787, 10, context saved
+26797, 1, find vector 5 in memory position 0x000A
+26798, 1, load address 0X048B into the PC
+26799, 40, ISR for device 5
+26839, 40, ISR for device 5
+26879, 40, ISR for device 5
+26919, 40, ISR for device 5
+26959, 40, ISR for device 5
+26999, 11, ISR for device 5
+27010, 1, IRET
+27011, 11, CPU burst
+27022, 1, switch to kernel mode
+27023, 10, context saved
+27033, 1, find vector 15 in memory position 0x001E
+27034, 1, load address 0X0584 into the PC
+27035, 40, ISR for device 15
+27075, 28, ISR for device 15
+27103, 1, IRET
+27104, 74, CPU burst
+27178, 1, switch to kernel mode
+27179, 10, context saved
+27189, 1, find vector 15 in memory position 0x001E
+27190, 1, load address 0X0584 into the PC
+27191, 40, ISR for device 15
+27231, 28, ISR for device 15
+27259, 1, IRET
+27260, 19, CPU burst
+27279, 1, switch to kernel mode
+27280, 10, context saved
+27290, 1, find vector 4 in memory position 0x0008
+27291, 1, load address 0X0292 into the PC
+27292, 40, ISR for device 4
+27332, 40, ISR for device 4
+27372, 40, ISR for device 4
+27412, 40, ISR for device 4
+27452, 40, ISR for device 4
+27492, 40, ISR for device 4
+27532, 10, ISR for device 4
+27542, 1, IRET
+27543, 69, CPU burst
+27612, 1, switch to kernel mode
+27613, 10, context saved
+27623, 1, find vector 4 in memory position 0x0008
+27624, 1, load address 0X0292 into the PC
+27625, 40, ISR for device 4
+27665, 40, ISR for device 4
+27705, 40, ISR for device 4
+27745, 40, ISR for device 4
+27785, 40, ISR for device 4
+27825, 40, ISR for device 4
+27865, 10, ISR for device 4
+27875, 1, IRET
+27876, 50, CPU burst
+27926, 1, switch to kernel mode
+27927, 10, context saved
+27937, 1, find vector 5 in memory position 0x000A
+27938, 1, load address 0X048B into the PC
+27939, 40, ISR for device 5
+27979, 40, ISR for device 5
+28019, 40, ISR for device 5
+28059, 40, ISR for device 5
+28099, 40, ISR for device 5
+28139, 11, ISR for device 5
+28150, 1, IRET
+28151, 28, CPU burst
+28179, 1, switch to kernel mode
+28180, 10, context saved
+28190, 1, find vector 5 in memory position 0x000A
+28191, 1, load address 0X048B into the PC
+28192, 40, ISR for device 5
+28232, 40, ISR for device 5
+28272, 40, ISR for device 5
+28312, 40, ISR for device 5
+28352, 40, ISR for device 5
+28392, 11, ISR for device 5
+28403, 1, IRET
+28404, 23, CPU burst
