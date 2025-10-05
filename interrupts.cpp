@@ -60,7 +60,85 @@ int main(int argc, char** argv) {
 
         /******************ADD YOUR SIMULATION CODE HERE*************************/
 
+        ++traceFileLineNumber;
 
+        // Keep the parsed label as our event type for logging
+        eventType = activity;
+
+        if (activity == "CPU") {
+            eventDuration = duration_intr;
+
+            execution += std::to_string(timeOfEvent) + ", "
+                      +  std::to_string(eventDuration) + ", CPU burst\n";
+
+            timeOfEvent += eventDuration;        
+            modeBit = 0;                        
+            continue;
+        }
+
+        // For interrupts: SYSCALL or END_IO
+        if (activity == "SYSCALL" || activity == "END_IO") {
+            deviceNumber = duration_intr;
+
+            isrAddress = vectors.at(deviceNumber);
+            int totalISRTime = delays.at(deviceNumber);
+
+            int overheadBefore =
+                switchModeDuration + saveContextDuration
+              + isrAddressSearchDuration + isrAddressExtractDuration;
+
+            int overheadAfter = iretExecuteDuration;
+
+            // Compute remaining ISR
+            taskEstimate = totalISRTime - (overheadBefore + overheadAfter);
+            if (taskEstimate < 0) taskEstimate = 0;
+
+            // switch to kernel mode
+            modeBit = 1;
+            eventDuration = switchModeDuration;
+            execution += std::to_string(timeOfEvent) + ", "
+                      +  std::to_string(eventDuration) + ", switch to kernel mode\n";
+            timeOfEvent += eventDuration;
+
+            // save context
+            eventDuration = saveContextDuration;
+            execution += std::to_string(timeOfEvent) + ", "
+                      +  std::to_string(eventDuration) + ", context saved\n";
+            timeOfEvent += eventDuration;
+
+            // search vector table entry
+            eventDuration = isrAddressSearchDuration;
+            execution += std::to_string(timeOfEvent) + ", "
+                      +  std::to_string(eventDuration) + ", find vector for device "
+                      +  std::to_string(deviceNumber) + "\n";
+            timeOfEvent += eventDuration;
+
+            // ---- extract ISR address
+            eventDuration = isrAddressExtractDuration;
+            execution += std::to_string(timeOfEvent) + ", "
+                      +  std::to_string(eventDuration) + ", obtain ISR address "
+                      +  isrAddress + "\n";
+            timeOfEvent += eventDuration;
+
+            // ---- execute ISR body (use the whole remaining budget in one activity)
+            if (taskEstimate > 0) {
+                eventDuration = taskEstimate;
+                execution += std::to_string(timeOfEvent) + ", "
+                          +  std::to_string(eventDuration) + ", execute ISR activity (device "
+                          +  std::to_string(deviceNumber) + ")\n";
+                timeOfEvent += eventDuration;
+            }
+
+            // ---- IRET
+            eventDuration = iretExecuteDuration;
+            execution += std::to_string(timeOfEvent) + ", "
+                      +  std::to_string(eventDuration) + ", IRET\n";
+            timeOfEvent += eventDuration;
+
+            // back to user mode
+            modeBit = 0;
+            continue;
+        }
 
         /************************************************************************/
 
