@@ -21,8 +21,9 @@ int main(int argc, char** argv) {
     /******************ADD YOUR VARIABLES HERE*************************/
     int negligible_time = 1; //1ms
     int context_save_time = 10; 
-    int ISR_runtime = 40;
+    int ISR_activity_time = 40;
     int current_time = 0;
+    int number_ISR_activites = 1; 
     /******************************************************************/
 
     //parse each line of the input trace file
@@ -42,54 +43,71 @@ int main(int argc, char** argv) {
             execution += inter_out;
             current_time = new_time;
 
-            //execution of ISR
-            execution += (std::to_string(current_time) + "," + std::to_string(ISR_runtime ) + ",Executing ISR for device " +std::to_string(duration_intr) + "\n");
-            current_time += ISR_runtime;
-
-            //device operation. find device operation time from device table
+            //find device operation time from device table
             int opr_time = 0; 
             if(duration_intr >(int)sizeof(delays))
             {
-                std::cout<<"ERROR: DEVICE " + std::to_string(duration_intr) +  " NOT FOUND"<<std::endl;
+                execution += std::to_string(current_time) + ", 0, Unkown Activity: DEVICE " + std::to_string(duration_intr) +  " NOT FOUND\n";              
             }
             else
             {
                 opr_time = delays[duration_intr];
             }
 
-            execution += std::to_string(current_time) + ", " + std::to_string(opr_time) + ", device " + std::to_string(duration_intr) + " I/O operation\n";
-            current_time += opr_time;
+            if(opr_time > 0)
+            {
+                execution += (std::to_string(current_time) + ", " + std::to_string(ISR_activity_time ) + ", SYSCALL: Run ISR (call device driver)" + "\n");
+                current_time += ISR_activity_time;
+                execution += (std::to_string(current_time) + ", " + std::to_string(ISR_activity_time ) + ",Transferring Data into Memory" + "\n");
+                current_time += ISR_activity_time;
 
-            //IRET
-            execution += std::to_string(current_time) + ", "+  std::to_string(negligible_time) + ",IRET\n";
-            current_time += negligible_time;
+                int ISR_remaining_time = opr_time - ISR_activity_time * number_ISR_activites;
+                if(ISR_remaining_time>0)
+                {
+                    //The ISR Body execution time needs to add up to *device delay*. 
+                    //check for errors until device has completed task, then IRET
+                    execution += std::to_string(current_time) + ", " + std::to_string(ISR_remaining_time) + ", Checking For Errors/Polling Device Flags "  + "\n";
+                    current_time += ISR_remaining_time;
+                    execution += std::to_string(current_time) + ", "+  std::to_string(negligible_time) + ", IRET\n";
+                    current_time +=negligible_time;
+                }
+                else 
+                {
+                    //the device finished its task during ISR execution. IRET after 
+                    execution += std::to_string(current_time) + ", "+  std::to_string(negligible_time) + 
+                        ", IRET (Delayed: device ready at" + std::to_string((current_time - ISR_activity_time) + opr_time) +"\n";
+                    current_time += (negligible_time);
+                }
 
+            }
+            
         }
-        else if(activity == "END_IO"){
+        else if(activity == "END_IO")
+        {
         
-		// checks if device number out of bounds
-		if (duration_intr < 0 || duration_intr >= (int)vectors.size()) {
-			execution += std::to_string(current_time) + ", 0, END_IO received for device " + std::to_string(duration_intr) + "\n";
-			continue;    
-		//to kernel mode, save context, find vector, load ISR into PC
-		auto [inter_out, new_time] = intr_boilerplate(current_time, duration_intr, context_save_time, vectors);
-		execution += inter_out;
-		current_time = new_time;
-		
-		//execution of ISR
-		execution += std::to_string(current_time) + ", " + std::to_string(ISR_runtime) + ", Executing ISR for END_IO device " + std::to_string(duration_intr) + "\n"
-		current_time += ISR_runtime;
-		
-		//IRET
-		execution += std::to_string(current_time) + ", " + std::to_string(negligible_time) + ", IRET\n";
-		current_time += negligible_time;
- 
-        }
-        else {
-            execution += std::to_string(current_time) + ", 0, UNKOWN ACTIVITY";
-        }
-        /************************************************************************/
-
+            // checks if device number out of bounds
+            if (duration_intr < 0 || duration_intr >= (int)vectors.size()) 
+            {
+                execution += std::to_string(current_time) + ", 0, END_IO received for device " + std::to_string(duration_intr) + "\n";
+                continue;    
+            }
+            //to kernel mode, save context, find vector, load ISR into PC
+            auto [inter_out, new_time] = intr_boilerplate(current_time, duration_intr, context_save_time, vectors);
+            execution += inter_out;
+            current_time = new_time;
+            
+            //execution of ISR
+            execution += std::to_string(current_time) + ", " + std::to_string(ISR_activity_time) + ", Executing ISR for END_IO device " + std::to_string(duration_intr) + "\n";
+            current_time += ISR_activity_time;
+            
+            //IRET
+            execution += std::to_string(current_time) + ", " + std::to_string(negligible_time) + ", IRET\n";
+            current_time += negligible_time;
+    
+            }
+            else 
+                execution += std::to_string(current_time) + ", 0, UNKOWN ACTIVITY";
+            /************************************************************************/
     }
 
     input_file.close();
