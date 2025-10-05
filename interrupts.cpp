@@ -40,14 +40,14 @@ int main(int argc, char** argv) {
     int modeBit = 0;     
     std::string deviceName;
 
-    // Fixed timing parameters 
+    // Fixed constants (all measured in ms)
     const int switchModeDuration = 1;
     const int saveContextDuration = 10; 
     const int isrAddressSearchDuration  = 1;
     const int isrAddressExtractDuration = 1;
     const int iretExecuteDuration       = 1;
 
-    // Simulation clocking and event metadata
+    // Simulation clocking and events
     long long timeOfEvent = 0;
     std::string eventType;
     int traceFileLineNumber = 0; 
