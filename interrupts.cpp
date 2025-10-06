@@ -4,6 +4,7 @@
  * @author Sasisekhar Govind
  * @author Fareen. Lavji
  * @author Dearell Tobenna Ezeoke
+ * @version October 05, 2025
  *
  * Assignment assumptions:
  * --> ISR of both END/IO and SYSCALL for the same device takes the same amount of time
@@ -25,13 +26,6 @@ int main(int argc, char** argv) {
 
     /******************ADD YOUR VARIABLES HERE*************************/
 
-    /*
-    * @todo: milestone1.issue3 --> add variables
-    * activity, eventDuration, deviceNumber, taskEstimate, isrAddress,
-    * modeBit, deviceName, switchModeDuration = 1ms, saveContextDuration = 10ms,
-    * isrAddressSearchDuration = 1ms, isrAddressExtractDuration = 1ms,
-    * iretExecuteDuration, timeOfEvent, eventType, traceFileLineNumber
-    */
     std::string activity;
     int eventDuration = 0;
     int deviceNumber = 0;

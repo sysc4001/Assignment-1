@@ -1,6 +1,18 @@
 #ifndef INTERRUPTS_HPP_
 #define INTERRUPTS_HPP_
 
+/**
+ *
+ * @file interrupts.hpp
+ * @author Sasisekhar Govind
+ * @author Fareen. Lavji
+ * @author Dearell Tobenna Ezeoke
+ * @version October 05, 2025
+ *
+ * Assignment assumptions:
+ * --> ISR of both END/IO and SYSCALL for the same device takes the same amount of time
+ * --> I/O devices are always available, i.e., no delay on I/O request, immediate start
+ */
 #include<iostream>
 #include<fstream>
 #include<string>
