@@ -61,6 +61,26 @@ int main(int argc, char** argv) {
 
             execution += std::to_string(current_time) + ", " + std::to_string(switch_time) + ", switch to user mode\n";
             current_time += switch_time;
+        } else if (activity == "END_IO") {
+            auto [interrupt_log, updated_time] = intr_boilerplate(current_time, duration_intr, context_save, vectors);
+            execution += interrupt_log;
+            current_time = updated_time;
+
+
+            execution += std::to_string(current_time) + ", " + std::to_string(device_delay) + ", END_IO: run the ISR (device driver)\n";
+            current_time += device_delay;
+
+
+            execution += std::to_string(current_time) + ", 416, check device status\n";
+            current_time += 416;
+
+
+            execution += std::to_string(current_time) + ", " + std::to_string(switch_time) + ", IRET\n";
+            current_time += switch_time;
+
+
+            execution += std::to_string(current_time) + ", " + std::to_string(switch_time) + ", switch to user mode\n";
+            current_time += switch_time;
         }
 
         /************************************************************************/
