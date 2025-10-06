@@ -65,3 +65,7 @@ void sim_task_over_time(std::string* execution_output, int* comp_uptime_ms_ptr, 
 
     increment_uptime(comp_uptime_ms_ptr, task_time_ms);
 }
+
+void increment_pc(int* pc_register) {
+    *pc_register += 1;
+}
