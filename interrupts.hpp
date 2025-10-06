@@ -1,6 +1,18 @@
 #ifndef INTERRUPTS_HPP_
 #define INTERRUPTS_HPP_
 
+/**
+ *
+ * @file interrupts.hpp
+ * @author Sasisekhar Govind
+ * @author Fareen. Lavji
+ * @author Dearell Tobenna Ezeoke
+ * @version October 05, 2025
+ *
+ * Assignment assumptions:
+ * --> ISR of both END/IO and SYSCALL for the same device takes the same amount of time
+ * --> I/O devices are always available, i.e., no delay on I/O request, immediate start
+ */
 #include<iostream>
 #include<fstream>
 #include<string>
@@ -138,5 +150,16 @@ void write_output(std::string execution) {
     }
 
     std::cout << "Output generated in execution.txt" << std::endl;
+}
+
+// Function to iterate through the table line by line
+void iterateByLine() const {
+    for (const auto& row : table_) {
+        if (row.size() == 2) { // Ensure the row has exactly 2 columns
+            std::cout << "Column 1: " << row[0] << ", Column 2: " << row[1] << std::endl;
+        } else {
+            std::cerr << "Invalid row size. Skipping..." << std::endl;
+        }
+    }
 }
 #endif
