@@ -36,7 +36,13 @@ int main(int argc, char** argv) {
 
         /******************ADD YOUR SIMULATION CODE HERE*************************/
 
-
+        // IF activity is CPU, then sim_task_over_time and increment PC
+        if (activity.compare("CPU")) {
+            sim_task_over_time(execution_ptr, comp_uptime_ms_ptr, duration_intr, "CPU Burst");
+            increment_pc(&program_counter_register_val);
+        }
+        // IF activity is SYSCALL, then index vector table ...
+        // IF activity is END_IO, then ...
 
         /************************************************************************/
 
