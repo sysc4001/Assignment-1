@@ -21,6 +21,7 @@ int main(int argc, char** argv) {
 
     /******************ADD YOUR VARIABLES HERE*************************/
 
+    std::string* execution_ptr = &execution;
     int* comp_uptime_ms_ptr;
     *comp_uptime_ms_ptr = 0; // Clock starts counting from 0 on startup
 
