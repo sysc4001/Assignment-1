@@ -1,0 +1,69 @@
+0, 60, CPU burst
+60, 1, switch to kernel mode
+61, 10, context saved
+71, 1, find vector 6 in memory position 0x000C
+72, 1, load address 0X0639 into the PC
+73, 40, SYSCALL: Run ISR (call device driver)
+113, 40, Transferring Data into Memory
+153, 185, Checking For Errors/Polling Device Flags 
+338, 1, IRET
+339, 55, CPU burst
+394, 1, switch to kernel mode
+395, 10, context saved
+405, 1, find vector 6 in memory position 0x000C
+406, 1, load address 0X0639 into the PC
+407, 40, END_IO: Run ISR (device driver)
+447, 225, check device status 
+672, 1, IRET
+673, 70, CPU burst
+743, 1, switch to kernel mode
+744, 10, context saved
+754, 1, find vector 1 in memory position 0x0002
+755, 1, load address 0X029C into the PC
+756, 40, SYSCALL: Run ISR (call device driver)
+796, 40, Transferring Data into Memory
+836, 20, Checking For Errors/Polling Device Flags 
+856, 1, IRET
+857, 45, CPU burst
+902, 1, switch to kernel mode
+903, 10, context saved
+913, 1, find vector 1 in memory position 0x0002
+914, 1, load address 0X029C into the PC
+915, 40, END_IO: Run ISR (device driver)
+955, 60, check device status 
+1015, 1, IRET
+1016, 50, CPU burst
+1066, 1, switch to kernel mode
+1067, 10, context saved
+1077, 1, find vector 17 in memory position 0x0022
+1078, 1, load address 0X05B3 into the PC
+1079, 40, SYSCALL: Run ISR (call device driver)
+1119, 40, Transferring Data into Memory
+1159, 155, Checking For Errors/Polling Device Flags 
+1314, 1, IRET
+1315, 40, CPU burst
+1355, 1, switch to kernel mode
+1356, 10, context saved
+1366, 1, find vector 17 in memory position 0x0022
+1367, 1, load address 0X05B3 into the PC
+1368, 40, END_IO: Run ISR (device driver)
+1408, 195, check device status 
+1603, 1, IRET
+1604, 65, CPU burst
+1669, 1, switch to kernel mode
+1670, 10, context saved
+1680, 1, find vector 11 in memory position 0x0016
+1681, 1, load address 0X01F8 into the PC
+1682, 40, SYSCALL: Run ISR (call device driver)
+1722, 40, Transferring Data into Memory
+1762, 443, Checking For Errors/Polling Device Flags 
+2205, 1, IRET
+2206, 55, CPU burst
+2261, 1, switch to kernel mode
+2262, 10, context saved
+2272, 1, find vector 11 in memory position 0x0016
+2273, 1, load address 0X01F8 into the PC
+2274, 40, END_IO: Run ISR (device driver)
+2314, 483, check device status 
+2797, 1, IRET
+2798, 75, CPU burst

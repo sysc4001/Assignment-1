@@ -1,0 +1,62 @@
+0, 80, CPU burst
+80, 1, switch to kernel mode
+81, 10, context saved
+91, 1, find vector 7 in memory position 0x000E
+92, 1, load address 0X00BD into the PC
+93, 40, SYSCALL: Run ISR (call device driver)
+133, 40, Transferring Data into Memory
+173, 72, Checking For Errors/Polling Device Flags 
+245, 1, IRET
+246, 60, CPU burst
+306, 1, switch to kernel mode
+307, 10, context saved
+317, 1, find vector 7 in memory position 0x000E
+318, 1, load address 0X00BD into the PC
+319, 40, END_IO: Run ISR (device driver)
+359, 112, check device status 
+471, 1, IRET
+472, 90, CPU burst
+562, 1, switch to kernel mode
+563, 10, context saved
+573, 1, find vector 5 in memory position 0x000A
+574, 1, load address 0X048B into the PC
+575, 40, SYSCALL: Run ISR (call device driver)
+615, 40, Transferring Data into Memory
+655, 131, Checking For Errors/Polling Device Flags 
+786, 1, IRET
+787, 50, CPU burst
+837, 1, switch to kernel mode
+838, 10, context saved
+848, 1, find vector 5 in memory position 0x000A
+849, 1, load address 0X048B into the PC
+850, 40, END_IO: Run ISR (device driver)
+890, 171, check device status 
+1061, 1, IRET
+1062, 40, CPU burst
+1102, 1, switch to kernel mode
+1103, 10, context saved
+1113, 1, find vector 20 in memory position 0x0028
+1114, 1, load address 0X07B7 into the PC
+1115, 30, CPU burst
+1145, 1, switch to kernel mode
+1146, 10, context saved
+1156, 1, find vector 20 in memory position 0x0028
+1157, 1, load address 0X07B7 into the PC
+1158, 85, CPU burst
+1243, 1, switch to kernel mode
+1244, 10, context saved
+1254, 1, find vector 4 in memory position 0x0008
+1255, 1, load address 0X0292 into the PC
+1256, 40, SYSCALL: Run ISR (call device driver)
+1296, 40, Transferring Data into Memory
+1336, 170, Checking For Errors/Polling Device Flags 
+1506, 1, IRET
+1507, 45, CPU burst
+1552, 1, switch to kernel mode
+1553, 10, context saved
+1563, 1, find vector 4 in memory position 0x0008
+1564, 1, load address 0X0292 into the PC
+1565, 40, END_IO: Run ISR (device driver)
+1605, 210, check device status 
+1815, 1, IRET
+1816, 75, CPU burst
