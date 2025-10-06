@@ -50,7 +50,7 @@ int main(int argc, char** argv) {
             execution += std::to_string(current_time) + ", " + std::to_string(device_delay) + ", SYSCALL: run the ISR (device driver)\n";
             current_time += device_delay;
 
-            execution += std::to_string(current_time) + ", 40, transfer data from device to memory\n";
+            execution += std::to_string(current_time) + ", " + std::to_string(isr_body_time) + ", transfer data from device to memory\n";
             current_time += 40;
 
             execution += std::to_string(current_time) + ", 376, check for errors\n";
