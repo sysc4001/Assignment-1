@@ -61,26 +61,25 @@ int main(int argc, char** argv) {
                 execution += (std::to_string(current_time) + ", " + std::to_string(ISR_activity_time ) + ", Transferring Data into Memory" + "\n");
                 current_time += ISR_activity_time;
 
-                int ISR_remaining_time = opr_time - ISR_activity_time * number_ISR_activites;
-                std::cout<<"time remaining "<<ISR_remaining_time<<std::endl;
+                int ISR_remaining_time = opr_time - (ISR_activity_time * number_ISR_activites) ;
                 if(ISR_remaining_time>0)
                 {
                     //The ISR Body execution time needs to add up to *device delay*. 
                     //check for errors until device has completed task, then IRET
                     execution += std::to_string(current_time) + ", " + std::to_string(ISR_remaining_time) + ", Checking For Errors/Polling Device Flags "  + "\n";
                     current_time += ISR_remaining_time;
-                    execution += std::to_string(current_time) + ", "+  std::to_string(negligible_time) + ", IRET\n";
+                    execution += std::to_string(current_time) + ", "+  std::to_string(negligible_time) + ", IRET (restore context and mode bit -> user)\n";
                     current_time +=negligible_time;
                 }
                 else 
                 {
                     //the device finished its task during ISR execution. IRET after 
                     execution += std::to_string(current_time) + ", "+  std::to_string(negligible_time) + 
-                        ", IRET (Delayed: device ready at" + std::to_string((current_time - ISR_activity_time) + opr_time) +"\n";
+                        ", IRET (restore context and mode bit = user) Delayed: device ready at " + std::to_string((current_time - ISR_activity_time * number_ISR_activites ) + opr_time) +"\n";
                     current_time += (negligible_time);
                 }
-
             }
+
             
         }
         else if(activity == "END_IO")
@@ -107,11 +106,12 @@ int main(int argc, char** argv) {
                 current_time += ISR_activity_time;
                 
                 int ISR_remaining_time = opr_time - ISR_activity_time;
-                std::cout<<"time remaining "<<ISR_remaining_time<<std::endl;
+         
                 if(ISR_remaining_time>0)
                 {
                     //The ISR Body execution time needs to add up to *device delay*. 
                     //check for errors until device has completed task, then IRET
+                    
                     execution += std::to_string(current_time) + ", " + std::to_string(ISR_remaining_time) + ", check device status "  + "\n";
                     current_time += ISR_remaining_time;
                     execution += std::to_string(current_time) + ", "+  std::to_string(negligible_time) + ", IRET\n";
@@ -124,6 +124,8 @@ int main(int argc, char** argv) {
                         ", IRET (Delayed: device ready at" + std::to_string((current_time - ISR_activity_time) + opr_time) +"\n";
                     current_time += (negligible_time);
                 }
+
+                
             }
         }
         else 
