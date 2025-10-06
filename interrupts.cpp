@@ -93,7 +93,7 @@ int main(int argc, char** argv) {
             taskEstimate = totalISRTime - (overheadBefore + overheadAfter);
             if (taskEstimate < 0) taskEstimate = 0;
 
-            // switch to kernel mode
+            // This will switch to kernel mode
             modeBit = 1;
             eventDuration = switchModeDuration;
             execution += std::to_string(timeOfEvent) + ", "
@@ -106,21 +106,20 @@ int main(int argc, char** argv) {
                       +  std::to_string(eventDuration) + ", context saved\n";
             timeOfEvent += eventDuration;
 
-            // search vector table entry
+            // This part searches the vector table entry
             eventDuration = isrAddressSearchDuration;
             execution += std::to_string(timeOfEvent) + ", "
                       +  std::to_string(eventDuration) + ", find vector for device "
                       +  std::to_string(deviceNumber) + "\n";
             timeOfEvent += eventDuration;
 
-            // ---- extract ISR address
+            // This will extract ISR address
             eventDuration = isrAddressExtractDuration;
             execution += std::to_string(timeOfEvent) + ", "
                       +  std::to_string(eventDuration) + ", obtain ISR address "
                       +  isrAddress + "\n";
             timeOfEvent += eventDuration;
 
-            // ---- execute ISR body (use the whole remaining budget in one activity)
             if (taskEstimate > 0) {
                 eventDuration = taskEstimate;
                 execution += std::to_string(timeOfEvent) + ", "
@@ -129,13 +128,13 @@ int main(int argc, char** argv) {
                 timeOfEvent += eventDuration;
             }
 
-            // ---- IRET
+            // IRET
             eventDuration = iretExecuteDuration;
             execution += std::to_string(timeOfEvent) + ", "
                       +  std::to_string(eventDuration) + ", IRET\n";
             timeOfEvent += eventDuration;
 
-            // back to user mode
+            // Sets it back to user mode
             modeBit = 0;
             continue;
         }
