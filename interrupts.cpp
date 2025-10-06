@@ -25,6 +25,9 @@ int main(int argc, char** argv) {
     int* comp_uptime_ms_ptr;
     *comp_uptime_ms_ptr = 0; // Clock starts counting from 0 on startup
 
+    int program_counter_register_val = 0x0000; // Verify value isn't 1
+    bool kernal_mode = true;
+
     /******************************************************************/
 
     //parse each line of the input trace file
